@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/sectionsFragment">
+    <fragment
+        android:id="@+id/sectionsFragment"
+        android:name="com.example.fineco.ui.sections.SectionsFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_sections" >
+        <action
+            android:id="@+id/action_sectionsFragment_to_topicsFragment"
+            app:destination="@id/topicsFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <fragment
+        android:id="@+id/budgetFragment"
+        android:name="com.example.fineco.ui.budget.BudgetFragment"
+        android:label="fragment_budget"
+        tools:layout="@layout/fragment_budget" />
+    <fragment
+        android:id="@+id/topicsFragment"
+        android:name="com.example.fineco.ui.topics.TopicsFragment"
+        android:label="fragment_topics"
+        tools:layout="@layout/fragment_topics" >
+        <argument
+            android:name="section_number"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_topicsFragment_to_topicVideoFragment"
+            app:destination="@id/topicVideoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/topicVideoFragment"
+        android:name="com.example.fineco.ui.topic.TopicVideoFragment"
+        android:label="fragment_topic_video"
+        tools:layout="@layout/fragment_topic_video" >
+        <argument
+            android:name="video_url"
+            app:argType="string" />
+    </fragment>
+</navigation>
