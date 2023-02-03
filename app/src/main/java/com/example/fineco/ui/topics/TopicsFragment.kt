@@ -11,7 +11,7 @@ import androidx.navigation.fragment.navArgs
 import com.example.fineco.R
 import com.example.fineco.data.Sections
 import com.example.fineco.databinding.FragmentTopicsBinding
-import com.example.fineco.ui.Button
+import com.example.fineco.ui.util.Button
 
 class TopicsFragment : Fragment() {
 

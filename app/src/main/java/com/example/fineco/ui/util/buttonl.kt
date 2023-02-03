@@ -1,4 +1,4 @@
-package com.example.fineco.ui
+package com.example.fineco.ui.util
 
 import android.app.Activity
 import android.content.Context

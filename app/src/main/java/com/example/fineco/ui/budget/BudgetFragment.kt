@@ -6,15 +6,37 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.fineco.R
+import com.example.fineco.databinding.FragmentBudgetBinding
+import com.example.fineco.databinding.FragmentTopicsBinding
+import com.example.fineco.ui.finances.EXPENSES
+import com.example.fineco.ui.finances.INCOMES
+import com.example.fineco.ui.util.FinancesPageAdapter
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class BudgetFragment : Fragment() {
     private lateinit var viewModel: BudgetViewModel
+    private lateinit var binding: FragmentBudgetBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_budget, container, false)
+    ): View {
+        binding = FragmentBudgetBinding.inflate(inflater, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val tabLayoutAdapter = FinancesPageAdapter(this)
+        val viewPager = binding.pager
+        viewPager.adapter = tabLayoutAdapter
+        val tabLayout = binding.tabLayout
+
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text =
+                if (position == 0) getString(R.string.expenses) else getString(R.string.incomes)
+        }.attach()
     }
 
 

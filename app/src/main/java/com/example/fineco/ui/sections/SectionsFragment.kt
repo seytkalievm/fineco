@@ -12,7 +12,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.fineco.R
 import com.example.fineco.data.Sections
 import com.example.fineco.databinding.FragmentSectionsBinding
-import com.example.fineco.ui.Button
+import com.example.fineco.ui.util.Button
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
