@@ -10,4 +10,24 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="back_button">back button</string>
+    <string name="add">add</string>
+    <string name="enter_value">Введите сумму</string>
+    <string name="invalid_value">Неверная сумма</string>
+
+    <string-array name="expense_categories">
+        <item>Электроника</item>
+        <item>Развлечения</item>
+        <item>Одежда</item>
+        <item>Рестораны</item>
+        <item>Супермаркеты</item>
+        <item>Прочее</item>
+    </string-array>
+
+    <string-array name="income_categories">
+        <item>Стипендия</item>
+        <item>Зарплата</item>
+        <item>Карманные деньги</item>
+        <item>Подарки</item>
+        <item>Прочее</item>
+    </string-array>
 </resources>

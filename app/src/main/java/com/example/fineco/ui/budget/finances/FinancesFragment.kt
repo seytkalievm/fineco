@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import com.example.fineco.databinding.FragmentFinancesBinding
+import com.example.fineco.ui.add_finance.AddFinanceDialogFragment
 import com.github.mikephil.charting.charts.PieChart
 import com.github.mikephil.charting.components.Legend
 import com.github.mikephil.charting.data.PieData
@@ -48,6 +49,10 @@ class FinancesFragment : Fragment() {
         }
         for (color in ColorTemplate.VORDIPLOM_COLORS) {
             colors.add(color)
+        }
+
+        binding.addFinanceFab.setOnClickListener {
+            AddFinanceDialogFragment.show(childFragmentManager, type, viewModel)
         }
 
         setUpPieChart()
