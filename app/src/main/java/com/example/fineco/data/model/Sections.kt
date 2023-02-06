@@ -1,4 +1,4 @@
-package com.example.fineco.data
+package com.example.fineco.data.model
 
 
 
@@ -21,12 +21,4 @@ object Sections {
 }
 
 
-data class Section(
-    val title: String,
-    val topics: List<Topic>
-)
 
-data class Topic(
-    val title: String,
-    val video: String,
-)

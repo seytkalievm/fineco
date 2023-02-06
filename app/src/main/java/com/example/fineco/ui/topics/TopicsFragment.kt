@@ -9,7 +9,7 @@ import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.fineco.R
-import com.example.fineco.data.Sections
+import com.example.fineco.data.model.Sections
 import com.example.fineco.databinding.FragmentTopicsBinding
 import com.example.fineco.ui.util.Button
 

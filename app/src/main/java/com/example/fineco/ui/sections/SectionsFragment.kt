@@ -1,6 +1,5 @@
 package com.example.fineco.ui.sections
 
-
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,7 +9,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.fineco.R
-import com.example.fineco.data.Sections
+import com.example.fineco.data.model.Sections
 import com.example.fineco.databinding.FragmentSectionsBinding
 import com.example.fineco.ui.util.Button
 import dagger.hilt.android.AndroidEntryPoint
