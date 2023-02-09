@@ -37,6 +37,7 @@ android {
     buildFeatures {
         viewBinding true
     }
+    buildToolsVersion '33.0.1'
 }
 
 dependencies {
@@ -74,6 +75,9 @@ dependencies {
 
     implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+
+    // ExoPlayer
+    implementation 'com.google.android.exoplayer:exoplayer:2.18.2'
 }
 
 kapt {
