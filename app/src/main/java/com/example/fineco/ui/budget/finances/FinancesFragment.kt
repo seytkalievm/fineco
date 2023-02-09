@@ -56,13 +56,11 @@ class FinancesFragment : Fragment() {
         }
 
         setUpPieChart()
-        val label = if (type == EXPENSES) "Расходы" else "Доходы"
 
         viewModel.data.observe(viewLifecycleOwner) {
-            val dataSet = PieDataSet(it, label)
+            val dataSet = PieDataSet(it, "")
             dataSet.colors = colors
             chart.data = PieData(dataSet)
-
             loadPieChartData()
         }
 
@@ -83,9 +81,12 @@ class FinancesFragment : Fragment() {
             setEntryLabelTextSize(10F)
         }
         chart.legend.apply {
+            textColor = Color.WHITE
+            textSize = 14f
             verticalAlignment = Legend.LegendVerticalAlignment.TOP
             horizontalAlignment = Legend.LegendHorizontalAlignment.LEFT
             orientation = Legend.LegendOrientation.VERTICAL
+            this.isWordWrapEnabled = false
             setDrawInside(true)
         }
     }

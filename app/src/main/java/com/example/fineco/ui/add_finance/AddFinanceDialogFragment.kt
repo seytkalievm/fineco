@@ -61,7 +61,7 @@ class AddFinanceDialogFragment (private val viewModel: FinancesViewModel)
             categories,
             android.R.layout.simple_spinner_item
         ).also {arrayAdapter ->
-            arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item)
+            arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
             spinner.adapter = arrayAdapter
         }
 
