@@ -9,7 +9,6 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.fineco.R
-import com.example.fineco.data.model.Sections
 import com.example.fineco.databinding.FragmentSectionsBinding
 import com.example.fineco.ui.util.Button
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,11 +30,11 @@ class SectionsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val sections = Sections.getSections()
+        val sections = viewModel.getSections()
         val navController = findNavController()
         for(i in sections.indices) {
             context?.let {
-                val args = bundleOf("section_number" to i)
+                val args = bundleOf("section_title" to sections[i])
                 binding.buttonsLl.addView(Button(requireActivity(), sections[i], it) {
                     navController.navigate(R.id.action_sectionsFragment_to_topicsFragment, args)
                 })

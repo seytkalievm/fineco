@@ -28,8 +28,8 @@
         android:label="fragment_topics"
         tools:layout="@layout/fragment_topics" >
         <argument
-            android:name="section_number"
-            app:argType="integer" />
+            android:name="section_title"
+            app:argType="string" />
         <action
             android:id="@+id/action_topicsFragment_to_topicVideoFragment"
             app:destination="@id/topicVideoFragment" />
@@ -40,7 +40,7 @@
         android:label="fragment_topic_video"
         tools:layout="@layout/fragment_topic_video" >
         <argument
-            android:name="video_url"
+            android:name="topic"
             app:argType="string" />
     </fragment>
 </navigation>
